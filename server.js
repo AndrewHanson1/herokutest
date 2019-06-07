@@ -49,8 +49,9 @@ var authRoute = require('./routes/authRoutes.js');
 app.use("/auth", authRoute);
 
 // Routes
+
 //require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/htmlRoutes")(router);
 
 var syncOptions = { force: false };
 
