@@ -1,0 +1,65 @@
+<div id="home" class="mt-4">
+  <!--Modal-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">You would like to be...</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <h2 class="modal-text"><span id="modal-span"></span></h2>
+        </div>
+        <div class="modal-footer">
+          <button type="btn" class="btn btn-secondary" data-dismiss="modal">Let me think about it...</button>
+          <a href="/results" type="btn" id="confirm" data-current-push="current" data-desired-push="desired"
+            class="btn btn-primary">YES, PLEASE!!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End of Modal-->
+  <div class="container">
+    <div class="text-center text-light" id="intro-sentence">
+      <p>
+        <h4>Feeling <em>ABC</em> is totally okay! But if you are interested in feeling <em>XYZ</em>, then we can help!
+        </h4>
+      </p>
+
+    </div>
+
+    <div class="row m-1 text-light">
+      <div class="col text-center" id="current-state-div">
+        <p>
+          <h2>How are you feeling now?</h2>
+        </p>
+        <div class="border">
+          {{> current-block }}
+        </div>
+      </div>
+
+      <div class="col text-light text-center" id="desired-state-div" style="display: none;">
+        <p>
+          <h2>How would you <i>like</i> to feel?</h2>
+        </p>
+        <div class="border">
+          {{!-- {{> desired-block }} --}}
+        </div>
+      </div>
+    </div>
+
+    <div id="confirmation-div" style="display: none;">
+      <a href="/results" class="btn" id="confirmation">YES!</a>
+    </div>
+
+    <div class="text-center mt-5" style="display: none;" id="back-btn">
+      <a href="/">
+        <h3>(re)start</h3>
+      </a>
+    </div>
+
+  </div>
+</div>
