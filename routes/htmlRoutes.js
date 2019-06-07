@@ -1,5 +1,5 @@
 var path = require("path");
-const router = require("express").Router();
+
 
 module.exports = function(app) {
   // Load index page
@@ -12,25 +12,25 @@ module.exports = function(app) {
 
   // Render Other Pages
   // the actual "db" content ntb edited/updated
-  router.get("/results", function(req, res) {
+  app.get("/results", function(req, res) {
     res.render("results");
   });
-  router.get("/history", function(req, res) {
+  app.get("/history", function(req, res) {
     res.render("history");
   });
-  router.get("/about", function(req, res) {
+ app.get("/about", function(req, res) {
     res.render("about");
   });
-  router.get("/other-resources", function(req, res) {
+  app.get("/other-resources", function(req, res) {
     res.render("other-resources");
   });
-  router.get("/signin", function(req, res) {
+  app.get("/signin", function(req, res) {
     res.render("signin");
   });
-  router.get("/signup", function(req, res) {
+  app.get("/signup", function(req, res) {
     res.render("results");
   });
-  router.get("*", function(req, res) {
+  app.get("*", function(req, res) {
     res.render("index");
   });
 }

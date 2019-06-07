@@ -53,7 +53,7 @@ app.use("/auth", authRoute);
 // Routes
 
 //require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(router);
+require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
