@@ -1,6 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var router = require("express").Router();
 var passport = require('passport');
 var cookieSession = require("cookie-session");
 var bodyParser = require('body-parser');
@@ -9,6 +10,7 @@ const keys = require("./config/key");
 var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
+
 
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
